@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input{
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+.login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.btna{
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+}
+
+.invalide{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.697);
+    margin-top: 5px;
+    animation-name: animation1;
+    position: relative;
+    animation-duration: 2s;
+}
+
+@keyframes animation1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.logpEsP {
+    height: 90%;
+    width: 100px;
+}
+
+.buttonlogin{
+    border: none;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.764);
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.buttonlogin:hover{
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(232, 172, 93);;
+}
+
+.head {
+    background-color: rgb(20, 18, 40);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.834);
+    padding-top: 10px;
+}
+
+img {
+    width: 75px;
+    height: 65px;
+    border-radius: 5px;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 500px;
+    background-color: blue;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg,
+            rgba(7, 3, 101, 0.862) 0%,
+            rgba(16, 16, 170, 0.864) 35%,
+            rgba(0, 212, 255, 1) 100%);
+}
+
+.descri {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    width: 500px;
+}
+
+.form {
+    background-color: white;
+    width: 450px;
+    z-index: 1;
+    margin-top: 75px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animation0;
+    position: relative;
+    animation-duration: 2s;
+}
+
+@keyframes animation0 {
+    0% {
+        left: 500px;
+        opacity: 0;
+    }
+
+    75% {
+        left: -100px;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+.CANDIDATER {
+    font-size: 28px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.second {
+    background-color: beige;
+}
+
+.inputAll {
+    width: 75%;
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+}
+
+.btn {
+    font-size: 14px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+    width: 50%;
+}
+
+.btn:hover {
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(20, 196, 64, 0.712);
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.reponse {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+}
+
+.question {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.accordion-item {
+    width: 500px;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.accordion-button {
+    color: rgba(7, 3, 101, 0.862);
+    font-weight: bold;
+}
+
+.accordion-collapse {
+    padding: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.one {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(7, 6, 39, 0.862);
+}
+
+.CTCI {
+    font-size: 30px;
+    color: rgb(232, 172, 93);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.two {
+    margin-right: 30px;
+    text-align: justify;
+
+}
+
+.tree {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 4px;
+    color: rgb(232, 172, 93);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1100px) {
+    .first {
+        height: auto;
+    }
+
+    .form {
+        margin-bottom: 50px;
+    }
+
+    .descri {
+        margin-left: 20px;
+
+    }
+
+    .CANDIDATER {
+        font-size: 25px;
+    }
+
+    .comment {
+        font-size: 30px;
+    }
+}

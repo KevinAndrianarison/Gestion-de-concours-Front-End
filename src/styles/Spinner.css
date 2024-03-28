@@ -1,0 +1,40 @@
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.487);
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-4 {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #0000;
+    border-right-color: #ffa50097;
+    position: relative;
+    animation: s4 1s infinite linear;
+  }
+  .spinner-4:before,
+  .spinner-4:after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+  }
+  .spinner-4:after {
+    animation-duration: 4s;
+  }
+  
+  @keyframes s4 {
+    100% {transform: rotate(1turn)}
+  }

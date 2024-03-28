@@ -1,0 +1,175 @@
+.buttonlogin {
+  border: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.764);
+  font-weight: bold;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.buttonlogin:hover {
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(232, 172, 93);
+}
+
+.header {
+  background-color: burlywood;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+}
+
+.btna {
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.liens {
+  margin-left: 50px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #d7dde5;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 5%;
+  align-items: center;
+  background: #18283b;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #8291a5;
+  padding: 8px 20px;
+  transition: all 0.1s ease;
+  border: none;
+}
+
+ul li a:hover,
+ul li a:active {
+  color: #fff;
+  border-bottom: 3px #0075ff solid;
+}
+
+.router-link-active {
+  color: #fff;
+  border-bottom: 3px #0075ff solid;
+}
+
+#icon {
+  background-color: #0075ff;
+  padding: 5px 7px 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#icon svg {
+  color: #fff;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+#icon:hover {
+  background: #fff;
+}
+
+#icon:hover svg {
+  color: #0075ff;
+}
+
+#checkbox,
+#icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    border-bottom: 1px solid #455468;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-color: #18283bef;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    text-align: center;
+    display: none;
+    margin-top: 65px;
+  }
+
+  ul li {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+
+  ul li a:hover,
+  .router-link-active {
+    border: none;
+  
+  }
+
+  #icon {
+    display: block;
+  }
+
+  #checkbox:checked~ul {
+    display: block;
+  }
+
+}

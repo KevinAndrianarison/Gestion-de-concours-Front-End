@@ -1,0 +1,105 @@
+
+.second {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nextBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    background-color: rgba(33, 33, 197, 0.846);
+    color: rgba(255, 255, 255, 0.927);
+    font-size: 14px;
+  }
+  
+  .nextBtn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+  }
+  
+  input {
+    padding-left: 15px;
+    width: 200px;
+    font-size: 14px;
+  }
+  
+  select:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+  }
+  
+  select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 10px ;
+    height: 42px;
+    margin: 8px 0;
+  }
+  .body {
+    margin-top: 15px;
+    height: 80vh;
+  }
+
+  .recherche{
+    border-radius: 0px 0 0 20px;
+  }
+  .fnd{
+    border: none;
+    padding: 0 15px 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(33, 33, 197, 0.846);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .find{
+    display: flex;
+    flex-direction: row;
+
+  }
+  
+  .head {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .table {
+    width: 60vw;
+    height: 70%;
+    margin: 0 auto;
+  }
+
+.scope{
+  font-size: 12px;
+}
+
+tr{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+tbody td {
+  font-weight: 500;
+  color: #999999;
+}
+
+.array{
+  width: 100%;
+  background-color: blueviolet;
+}
+

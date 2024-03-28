@@ -1,26 +1,39 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+import WorkspaceAcceuil from "./components/WorkspaceAcceuil.vue";
+import WorkspaceAdmin from "./components/WorkspaceAdmin.vue";
+import { useShow } from "@/stores/Show";
+import { onBeforeMount } from "vue";
+import ModalComponent from "./components/ModalComponent.vue";
+import SpinnerComponent from "./components/SpinnerComponent.vue";
+import DeconnexionComponent from "./components/DeconnexionComponent.vue";
+import MessageComponent from './components/MessageComponent.vue'
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+const show = useShow();
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+onBeforeMount(() => {
+  if (localStorage.getItem("token")) {
+    show.showAdmin = true;
+  } else {
+    show.showAdminAcceuil = true;
   }
-}
+});
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <WorkspaceAcceuil v-if="show.showAdminAcceuil"></WorkspaceAcceuil>
+  <WorkspaceAdmin v-if="show.showAdmin"></WorkspaceAdmin>
+  <Teleport to="body">
+    <ModalComponent></ModalComponent>
+  </Teleport>
+  <Teleport to="body">
+    <SpinnerComponent></SpinnerComponent>
+  </Teleport>
+  <Teleport to="body">
+    <DeconnexionComponent></DeconnexionComponent>
+  </Teleport>
+  <Teleport to="body">
+    <MessageComponent></MessageComponent>
+  </Teleport>
+</template>
+
+<style scoped></style>
