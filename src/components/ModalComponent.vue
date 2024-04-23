@@ -4,14 +4,14 @@ import { useUrl } from "@/stores/Url";
 import axios from "axios";
 import { ref } from "vue";
 const show = useShow();
-const URL = useUrl().url
+const URL = useUrl().url;
 
 const username = ref("");
 const mdp = ref(null);
 
 function closemodale() {
   show.showModale = false;
-  show.showErrorLogin = false
+  show.showErrorLogin = false;
 }
 
 function login() {
@@ -22,21 +22,22 @@ function login() {
   axios
     .post(`${URL}/api/login`, formData)
     .then((response) => {
-      let token = response.data;
-      localStorage.setItem("token", token);
-      if (parseJWT().identifiant_admin === "admin") {
-        show.showModale = false;
-        show.showAdminAcceuil = false;
-        show.showAdmin = true;
-        show.showErrorLogin = false
-      }
-      else{
-        show.showErrorLogin = true
+      if (response.data.status === "error") {
+        show.showErrorLogin = true;
+      } else {
+        let token = response.data;
+        localStorage.setItem("token", token);
+        if (parseJWT().identifiant_admin === "admin") {
+          show.showModale = false;
+          show.showAdminAcceuil = false;
+          show.showAdmin = true;
+          show.showErrorLogin = false;
+        }
       }
     })
     .catch((error) => {
       console.error("Erreur de POST : ", error);
-      show.showErrorLogin = true
+      show.showErrorLogin = true;
     });
   username.value = "";
   mdp.value = null;
@@ -54,27 +55,39 @@ function parseJWT() {
     <div class="showModal" v-if="show.showModale">
       <div class="formModal">
         <div class="divbtn">
-          <button
-            @click="closemodale"
-            type="button"
-            class="Annuller"
-          >
-            X
-          </button>
+          <button @click="closemodale" type="button" class="Annuller">X</button>
         </div>
 
         <h1 class="login">Login !</h1>
         <label for="task" class="form-label mt-4">Identifiant : </label>
-        <input type="text" class="form-control" id="" aria-describedby="" v-model="username"/>
+        <input
+          type="text"
+          class="form-control"
+          id=""
+          aria-describedby=""
+          v-model="username"
+        />
         <div class="form-group">
           <label for="exampleTextarea" class="form-label mt-4"
             >Mot de passe :</label
           >
-          <input type="password" class="form-control" id="" aria-describedby="" v-model="mdp" />
+          <input
+            type="password"
+            class="form-control"
+            id=""
+            aria-describedby=""
+            v-model="mdp"
+          />
         </div>
-          <p  v-if="show.showErrorLogin" class="erreur mt-1">Veuillez vérifier vos information</p>
+        <p v-if="show.showErrorLogin" class="erreur mt-1">
+          Veuillez vérifier vos information
+        </p>
         <div class="valider">
-          <button type="submit" @click="login" class="Modifier btn btn-primary mt-4">
+          <button
+            type="submit"
+            @click="login"
+            class="Modifier btn btn-primary mt-4"
+          >
             Connexion
           </button>
         </div>

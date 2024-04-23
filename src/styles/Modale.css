@@ -121,3 +121,12 @@
   .v-leave-to {
     opacity: 0;
   }
+
+
+  .showModal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    display: block;
+  }

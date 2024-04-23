@@ -16,7 +16,9 @@ onBeforeMount(() => {
   } else {
     show.showAdminAcceuil = true;
   }
-});
+})
+
+
 </script>
 
 <template>
