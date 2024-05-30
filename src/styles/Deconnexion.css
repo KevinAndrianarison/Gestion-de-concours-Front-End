@@ -31,7 +31,6 @@
 .Modifier:hover {
     background-color: white;
     color: rgb(13, 87, 226);
-    border: 1px rgb(13, 87, 226) solid;
     font-weight: bold;
 
 }
@@ -39,6 +38,8 @@
 .Modifier {
     font-weight: bold;
     height: 15%;
+    transition: all 0.7s ease-in-out;
+    border: 2px rgba(13, 116, 226, 0.492) solid;
 }
 
 .Annuller {
@@ -46,13 +47,15 @@
     height: 15%;
     background-color: white;
     color: gray;
-    border: 1px gray solid;
+    border: 2px gray solid;
+    transition: all 0.7s ease-in-out;
+
 }
 
-.Annuller:hover{
+.Annuller:hover {
     background-color: white;
     color: rgb(201, 177, 20);
-    border: 1px rgb(201, 177, 20) solid;
+    border: 2px rgb(201, 177, 20) solid;
     font-weight: bold;
 }
 

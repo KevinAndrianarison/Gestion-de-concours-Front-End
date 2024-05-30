@@ -18,17 +18,23 @@ function logout() {
   <Transition>
     <div class="showModal" v-if="show.showDeconnexion">
       <div class="formModal">
-        <h6 class="login">Voulez-vous vraiment se deconnecter !</h6>
+        <h6 class="login">Voulez-vous vraiment vous deconnecter !</h6>
         <div class="valider">
-        <button
-          type="submit"
-          @click="logout"
-          class="Modifier btn btn-primary mt-5"
-        >
-          OUI
-        </button>
-        <button @click="closemodale" type="button" class="Annuller btn btn-primary mt-5">NON</button>
-      </div>
+          <button
+            type="submit"
+            @click="logout"
+            class="Modifier btn btn-primary mt-5"
+          >
+            OUI
+          </button>
+          <button
+            @click="closemodale"
+            type="button"
+            class="Annuller btn btn-primary mt-5"
+          >
+            NON
+          </button>
+        </div>
       </div>
     </div>
   </Transition>

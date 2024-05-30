@@ -55,7 +55,6 @@ export const useInformation = defineStore("Information", () => {
     formations.value = "";
   }
 
-
   function getInformations() {
     show.showSpinner = true;
     axios
@@ -66,14 +65,14 @@ export const useInformation = defineStore("Information", () => {
         centres.value = infos.centres;
         conditions.value = infos.conditions;
         date_debut.value = infos.date_debut.split("-").reverse().join("/");
-        date_fin.value = infos.date_fin.split("-").reverse().join("/")
+        date_fin.value = infos.date_fin.split("-").reverse().join("/");
         droits.value = infos.droits;
         epreuves.value = infos.epreuves;
         formations.value = infos.formations;
-        show.closeSpinner()
+        show.closeSpinner();
       })
       .catch((error) => {
-        show.closeSpinner()
+        show.closeSpinner();
         console.error("Erreur de GET infos : ", error);
       });
   }

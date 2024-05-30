@@ -7,8 +7,6 @@ import { useInformation } from "./Information";
 import { useMessages } from "@/stores/Messages";
 import { useShow } from "@/stores/Show";
 
-
-
 export const useCandidat = defineStore("Candidat", () => {
   const Messages = useMessages();
   const show = useShow();
@@ -18,11 +16,9 @@ export const useCandidat = defineStore("Candidat", () => {
   const nomComplet = ref("");
   const numeroPhone = ref(null);
   const email = ref("");
-  const listeCandidat = ref([])
-  const listeCandidatRecherche = ref([])
-  const idannee = ref(null)
-
-
+  const listeCandidat = ref([]);
+  const listeCandidatRecherche = ref([]);
+  const idannee = ref(null);
 
   function postCandidats() {
     show.showSpinner = true;
@@ -39,7 +35,7 @@ export const useCandidat = defineStore("Candidat", () => {
     axios
       .post(`${URL}/api/candidat`, formData)
       .then(() => {
-        show.closeSpinner()
+        show.closeSpinner();
         Messages.messageSucces = "Inscription effectuée !";
         setTimeout(() => {
           Messages.messageSucces = "";
@@ -47,7 +43,7 @@ export const useCandidat = defineStore("Candidat", () => {
       })
       .catch((error) => {
         console.error("Erreur de POST : ", error);
-        show.closeSpinner()
+        show.closeSpinner();
         Messages.messageError = "Inscription echoué !";
         setTimeout(() => {
           Messages.messageError = "";
@@ -59,22 +55,20 @@ export const useCandidat = defineStore("Candidat", () => {
     email.value = "";
   }
 
-  function filterInput(Search){
-    if(!Search){
-      getCandidat(idannee.value)
+  function filterInput(Search) {
+    if (!Search) {
+      getCandidat(idannee.value);
     }
   }
 
-  
   function filtrer(Search) {
     listeCandidat.value = listeCandidat.value.filter((list) => {
       return list.nom_candidat.match(Search);
     });
 
-    if(!Search){
-      getCandidat(idannee.value)
+    if (!Search) {
+      getCandidat(idannee.value);
     }
-
   }
 
   function getCandidat(id) {
@@ -82,13 +76,13 @@ export const useCandidat = defineStore("Candidat", () => {
     axios
       .get(`${URL}/api/candidat/${id}`)
       .then((response) => {
-        listeCandidat.value = response.data.data
-        show.closeSpinner()
+        listeCandidat.value = response.data.data;
+        console.log(response.data.data);
+        show.closeSpinner();
       })
       .catch((error) => {
         console.error("Erreur de GET AU : ", error);
-        show.closeSpinner()
-
+        show.closeSpinner();
       });
   }
 
@@ -102,6 +96,6 @@ export const useCandidat = defineStore("Candidat", () => {
     email,
     listeCandidatRecherche,
     listeCandidat,
-    idannee
+    idannee,
   };
 });

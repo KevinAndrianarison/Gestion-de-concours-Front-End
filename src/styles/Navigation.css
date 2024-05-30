@@ -1,13 +1,17 @@
 .buttonlogin {
   border: none;
   padding: 10px 15px 10px 15px;
+  font-size: 12px;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.764);
   font-weight: bold;
   transition: all 0.8s ease-in-out;
   cursor: pointer;
   margin-bottom: 10px;
+  margin-left: 15px;
 }
+
+
 
 .buttonlogin:hover {
   border-radius: 15px;
@@ -68,7 +72,11 @@ nav {
 
 .logo {
   color: #fff;
-  font-size: 22px;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color: #d7dde5;
+
 }
 
 ul {
@@ -81,6 +89,8 @@ ul {
 
 ul li {
   display: inline-block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
 }
 
 ul li a {
@@ -91,7 +101,7 @@ ul li a {
   border: none;
 }
 
-ul li a:hover,
+
 ul li a:active {
   color: #fff;
   border-bottom: 3px #0075ff solid;
@@ -161,7 +171,7 @@ ul li a:active {
   ul li a:hover,
   .router-link-active {
     border: none;
-  
+
   }
 
   #icon {

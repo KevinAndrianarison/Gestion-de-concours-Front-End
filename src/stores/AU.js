@@ -8,10 +8,10 @@ import { useShow } from "./Show";
 export const useAU = defineStore("AU", () => {
   const URL = useUrl().url;
   const AU = ref([]);
-  const idAU = ref(null)
-  const newAU = ref(null)
-  const Messages = useMessages()
-  const show = useShow()
+  const idAU = ref(null);
+  const newAU = ref(null);
+  const Messages = useMessages();
+  const show = useShow();
 
   function getAU() {
     axios
@@ -24,31 +24,29 @@ export const useAU = defineStore("AU", () => {
       });
   }
 
-  function postAU(){
-
-    show.showSpinner = true
+  function postAU() {
+    show.showSpinner = true;
     axios
-    .post(`${URL}/api/AU`, {
-      au : newAU.value
-    })
-    .then(() => {
-      getAU()
-      show.closeSpinner()
-      Messages.messageSucces = "Nouvelle année ajoutée ! "
-      setTimeout(() => {
-        Messages.messageSucces = "";
-      }, 3000);
-
-    })
-    .catch((error) => {
-      console.error("Erreur de POST : ", error);
-      show.closeSpinner()
-      Messages.messageError = "Erreur d'ajout ! "
-      setTimeout(() => {
-        Messages.messageError = "";
-      }, 3000);
-    })
-    newAU.value = ""
+      .post(`${URL}/api/AU`, {
+        au: newAU.value,
+      })
+      .then(() => {
+        getAU();
+        show.closeSpinner();
+        Messages.messageSucces = "Nouvelle année ajoutée ! ";
+        setTimeout(() => {
+          Messages.messageSucces = "";
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Erreur de POST : ", error);
+        show.closeSpinner();
+        Messages.messageError = "Erreur d'ajout ! ";
+        setTimeout(() => {
+          Messages.messageError = "";
+        }, 3000);
+      });
+    newAU.value = "";
   }
 
   return {
@@ -56,7 +54,6 @@ export const useAU = defineStore("AU", () => {
     postAU,
     AU,
     idAU,
-    newAU
-    
+    newAU,
   };
 });

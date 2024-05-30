@@ -5,7 +5,7 @@ import { useShow } from "@/stores/Show";
 const show = useShow();
 
 function deconnexion() {
-  show.showDeconnexion = true
+  show.showDeconnexion = true;
 }
 </script>
 

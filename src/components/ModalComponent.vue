@@ -58,7 +58,7 @@ function parseJWT() {
           <button @click="closemodale" type="button" class="Annuller">X</button>
         </div>
 
-        <h1 class="login">Login !</h1>
+        <h1 class="login">🔐 Connexion !</h1>
         <label for="task" class="form-label mt-4">Identifiant : </label>
         <input
           type="text"

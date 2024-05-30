@@ -6,7 +6,7 @@ import { onBeforeMount } from "vue";
 import ModalComponent from "./components/ModalComponent.vue";
 import SpinnerComponent from "./components/SpinnerComponent.vue";
 import DeconnexionComponent from "./components/DeconnexionComponent.vue";
-import MessageComponent from './components/MessageComponent.vue'
+import MessageComponent from "./components/MessageComponent.vue";
 
 const show = useShow();
 
@@ -16,9 +16,7 @@ onBeforeMount(() => {
   } else {
     show.showAdminAcceuil = true;
   }
-})
-
-
+});
 </script>
 
 <template>

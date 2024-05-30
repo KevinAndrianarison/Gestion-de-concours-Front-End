@@ -5,7 +5,7 @@ defineProps(["deconnexion"]);
 
 <template>
   <nav>
-    <div class="logo">Admin - Dash</div>
+    <div class="logo">📊 Admin - Dash</div>
     <div>
       <input type="checkbox" id="checkbox" />
       <label for="checkbox" id="icon">
@@ -24,15 +24,15 @@ defineProps(["deconnexion"]);
         </svg>
       </label>
       <ul>
-        <li class="li"><router-link to="/">Informations</router-link></li>
-        <li class="li"><router-link to="/liste">Listes</router-link></li>
+        <li class="li"><router-link to="/"><i class="fa-solid fa-circle-info" style="color: rgb(232, 172, 93); margin-right: 5px;"></i>Informations</router-link></li>
+        <li class="li"><router-link to="/liste"><i class="fa-solid fa-list-ol" style="color: rgb(232, 172, 93); margin-right: 5px;"></i>Listes</router-link></li>
+        <li class="li"><router-link to="/profil"> <i class="fa-regular fa-user" style="color: rgb(232, 172, 93); margin-right: 5px;"></i>Profil</router-link></li>
         <li>
-          <button @click="deconnexion" class="buttonlogin">Déconnexion</button>
+          <button @click="deconnexion" class="buttonlogin">⏏️ Déconnexion</button>
         </li>
       </ul>
     </div>
   </nav>
 </template>
 
-<style scoped src="../styles/Navigation.css">
-</style>
+<style scoped src="../styles/Navigation.css"></style>

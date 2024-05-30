@@ -1,0 +1,111 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-bottom: 3%;
+}
+
+.btn {
+    width: 75%;
+    background-color: rgba(26, 170, 214, 0.609);
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+    border-radius: 25px;
+}
+
+.main {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.nom,
+.pseudo,
+.mdp {
+    border: none;
+    height: 35px;
+    padding-left: 15px;
+    font-size: 14px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    background-color: rgba(128, 128, 128, 0.142);
+    border-radius: 5px;
+
+}
+
+.bottom {
+    background-color: white;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 10%;
+}
+
+h1 {
+    margin-top: 2%;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.titles{
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 550px) {
+    .titles {
+      font-size: 20px;
+    }
+}
+
+.hover{
+    background-color: rgba(26, 170, 214, 0.609);
+    color: black;
+}
+
+li{
+    width: 50%;
+    text-align: center;
+    padding-top: 8px;
+    height: 100%;
+}
+
+.content {
+    width: 350px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    height: 65vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+    font-size: 15px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}

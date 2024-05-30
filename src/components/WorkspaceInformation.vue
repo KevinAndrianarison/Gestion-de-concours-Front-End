@@ -12,7 +12,7 @@ onBeforeMount(() => {
   <div class="container">
     <header>Enregister les informations du concour !</header>
 
-    <form action="#">
+    <form action=".form">
       <div class="form first">
         <div class="details personal">
           <div class="fields">
@@ -101,10 +101,10 @@ onBeforeMount(() => {
               />
             </div>
 
-            <div @click="infos.putInfos" class="input-field fieldsBtn">
-              <br>
-              <button class="nextBtn">
-                <span class="btnText">Valider</span>
+            <div class="input-field fieldsBtn">
+              <br />
+              <button @click="infos.putInfos" class="nextBtn">
+                <span class="btnText">✅ Valider</span>
               </button>
             </div>
           </div>

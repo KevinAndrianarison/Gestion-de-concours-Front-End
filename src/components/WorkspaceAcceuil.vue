@@ -4,7 +4,6 @@ import { useShow } from "@/stores/Show";
 import { useInformation } from "@/stores/Information";
 import { useAU } from "@/stores/AU";
 import { useCandidat } from "@/stores/Candidat";
-// import axios from "axios";
 
 const au = useAU();
 const infos = useInformation();
@@ -34,8 +33,8 @@ function regexEmail() {
     <div class="logpEsP">
       <img src="../assets/logo_espa.png" alt="logo ESP" />
     </div>
-    <h2>"Inscription"</h2>
-    <button @click="showmodalefunct" class="buttonlogin">Login</button>
+    <h2>📝 Inscription</h2>
+    <button @click="showmodalefunct" class="buttonlogin">👤 Connexion</button>
   </div>
   <div class="first">
     <div class="descri">

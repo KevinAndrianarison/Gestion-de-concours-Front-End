@@ -4,12 +4,12 @@ import { ref } from "vue";
 export const useShow = defineStore("Show", () => {
   const showAdmin = ref(false);
   const showAdminAcceuil = ref(false);
-  const showModale = ref(false)
-  const showSpinner = ref(false)
-  const showDeconnexion = ref(false)
-  const showErrorLogin = ref(false)
+  const showModale = ref(false);
+  const showSpinner = ref(false);
+  const showDeconnexion = ref(false);
+  const showErrorLogin = ref(false);
 
-  function closeSpinner(){
+  function closeSpinner() {
     setTimeout(() => {
       showSpinner.value = false;
     }, 1000);
@@ -22,6 +22,6 @@ export const useShow = defineStore("Show", () => {
     showSpinner,
     showDeconnexion,
     showErrorLogin,
-    closeSpinner
+    closeSpinner,
   };
 });
